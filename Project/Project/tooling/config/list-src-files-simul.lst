@@ -1,0 +1,5 @@
+src/simulation/modules/cpu.v
+src/simulation/modules/alu.v
+src/simulation/modules/memory.v
+src/simulation/modules/register.v
+src/simulation/top_cpu.v

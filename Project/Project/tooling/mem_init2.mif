@@ -1,0 +1,29 @@
+-- Quartus II generated Memory Initialization File (.mif)
+
+WIDTH=16;
+DEPTH=64;
+
+ADDRESS_RADIX=UNS;
+DATA_RADIX=HEX;
+
+CONTENT BEGIN
+    [0..7]:     0000;
+
+    -- MAIN PROGRAM
+    8:          7101;   -- IN A              ucitaj A
+    9:          8101;   -- OUT A             proveri ulaz
+
+    10:         D000;   -- JSR SUBR          skok na potprogram
+    11:         0010;   -- adresa potprograma = 16
+
+    12:         8201;   -- OUT B             rezultat iz potprograma
+    13:         F000;   -- STOP
+
+    -- SUBROUTINE
+    16:         7201;   -- IN B              ucitaj B
+    17:         1212;   -- ADD B, A, B       B = A + B
+    18:         8201;   -- OUT B             prikazi rezultat u potprogramu
+    19:         E000;   -- RTS               povratak u glavni program
+
+    [20..63]:   0000;
+END;
